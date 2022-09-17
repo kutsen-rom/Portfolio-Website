@@ -1,0 +1,137 @@
+.contact {
+    height: 100%;
+    width: 100%;
+    background-color: var(--color-background);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2.5rem 0 10rem 0;
+}
+
+.contact h2 {
+    color: white;
+}
+
+.contact-form {
+    width: 50%;
+    position: relative;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    margin: 0.1rem auto;
+    border-radius: 3px;
+    border: 1px solid transparent;
+    padding: 0.75rem;
+    color: white;
+    background-color: rgb(20, 26, 34);
+}
+
+.contact .submit-button {
+    width: 6rem;
+    font-size: 1rem;
+    position: absolute;
+    background-color: var(--color-primary);
+    right: 0;
+    border: 2px solid transparent;
+    transition: all 0.3s;
+}
+
+.contact .submit-button:hover {
+    cursor: pointer;
+    background-color: var(--color-background);
+    border: 2px solid white;
+}
+
+.result {
+    width: 100%;
+    height: 120%;
+    position: absolute;
+    top: 0;
+    border-radius: 15px;
+    z-index: -5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.75rem;
+}
+
+.sent {
+    background-color: var(--color-primary);
+}
+
+.error {
+    background-color: rgb(252, 71, 46);
+}
+
+.loading {
+    background-color: var(--color-secondary)
+}
+
+.no {
+    display: none;
+}
+
+@keyframes message-sent {
+    0% {
+        z-index: 100;
+        opacity: 1;
+    }
+
+    50% {
+        z-index: 100;
+        opacity: 1;
+    }
+
+    100% {
+        z-index: -5;
+        opacity: 0;
+    }
+}
+
+@keyframes message-error {
+    0% {
+        z-index: 99;
+        opacity: 1;
+    }
+
+    50% {
+        z-index: 99;
+        opacity: 1;
+    }
+
+    100% {
+        z-index: -4;
+        opacity: 0;
+    }
+}
+
+@keyframes message-loading {
+    0% {
+        z-index: -4;
+        opacity: 0;
+    }
+
+    100% {
+        z-index: 99;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    .contact-form {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .contact-form input, .contact-form textarea {
+        padding-right: 0rem;
+    }
+
+    .contact .submit-button {
+        padding: 0.5rem;
+    }
+
+}

@@ -1,0 +1,96 @@
+.about {
+    background-image: url('../../../public/images/about-background4.svg');
+    background-size: 110%;
+    background-position: center;
+    color: white;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    animation: background infinite 60s;
+}
+
+.about .text {
+    text-align: center;
+    margin-top: 37vh;
+}
+
+.about p {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+}
+
+.about strong {
+    font-weight: 500;
+    color: var(--color-secondary);
+}
+
+.about .projects-button {
+    background-color: transparent;
+    color: white;
+    padding: 0.6rem 1rem;
+    font-size: 1rem;
+    border-radius: 3px;
+    border: 2px solid white;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.about .projects-button:hover {
+    cursor: pointer;
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+@keyframes background {
+    0% {
+        background-position: 100% 0%;
+    }
+
+    25% {
+        background-position: 0% 10%;
+    }
+
+    50% {
+        background-position: 90% 20%;
+    }
+
+    75% {
+        background-position: 30% 30%;
+    }
+
+    100% {
+        background-position: 100% 0%;
+    }
+}
+
+@media only screen and (max-width: 1366px) {
+    .about {
+        background-size: 130%;
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    .about {
+        background-size: 150%;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .about {
+        background-size: cover;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+    .about p {
+        font-size: 1.5rem;
+    }
+
+    .about .text {
+        text-align: center;
+        margin-top: 25vh;
+    }
+}
+
+

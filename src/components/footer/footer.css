@@ -1,0 +1,76 @@
+footer {
+    width: 100%;
+    height: 165px;
+    background-color: rgb(20, 26, 34);
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+footer button {
+    background-color: var(--color-primary);
+    border: 2px solid transparent;
+    padding: 0.5rem 1rem;
+    color: white;
+    border-radius: 5px;
+    position: relative;
+    top: -10%;
+    transition: all 0.3s;
+}
+
+footer button:hover {
+    cursor: pointer;
+    background-color: var(--color-background);
+    border: 2px solid white;
+}
+
+.contact-links {
+    margin-top: 1rem;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.contact-link {
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    margin: 0 2rem;
+}
+
+footer h6 {
+    color: white;
+}
+
+footer .telegram {
+    background-image: url('/public/images/contact-telegram.svg');
+    background-repeat: no-repeat;
+    transition: all 0.3s;
+}
+
+footer .telegram:hover {
+    background-image: url('/public/images/contact-telegram-hover.svg');
+}
+
+footer .linked-in {
+    background-image: url('/public/images/contact-linkedin.svg');
+    transition: all 0.3s;
+    background-repeat: no-repeat;
+}
+
+footer .linked-in:hover {
+    background-image: url('/public/images/contact-linkedin-hover.svg');
+}
+
+footer .github {
+    background-image: url('/public/images/contact-github.svg');
+    transition: all 0.3s;
+    background-repeat: no-repeat;
+}
+
+footer .github:hover {
+    background-image: url('/public/images/contact-github-hover.svg');
+}
+

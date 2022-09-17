@@ -1,0 +1,244 @@
+.project {
+    width: 60%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 3rem;
+    overflow: hidden;
+}
+
+.project .details {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    text-align: center;
+    position: absolute;
+}
+
+.project .details a {
+    text-decoration: none;
+    color: white;
+    padding: 0.75rem;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.project .details a:hover {
+    color: black;
+    background-color: var(--color-secondary);
+}
+
+.project-name {
+    position: absolute;
+    top: -20%;
+    color: transparent;
+}
+
+.project-link {
+    position: absolute;
+    bottom: -20%;
+}
+
+.project .technologies {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+}
+
+.project .technology {
+    margin: 0 18%;
+    z-index: -10;
+}
+
+@keyframes show-project-name {
+    0% {
+        top: -20%;
+        color: transparent;
+    }
+
+    100% {
+        top: 15%;
+        color: black;
+    }
+}
+
+@keyframes hide-project-name {
+    0% {
+        top: 15%;
+        color: black;
+    }
+
+    100% {
+        top: -20%;
+        color: transparent;
+    }
+}
+
+@keyframes show-project-link {
+    0% {
+        bottom: -20%;
+        background-color: transparent;
+    }
+
+    100% {
+        bottom: 15%;
+        background-color: var(--color-primary);
+    }
+}
+
+@keyframes hide-project-link {
+    0% {
+        bottom: 15%;
+        background-color: var(--color-primary);
+    }
+
+    100% {
+        bottom: -20%;
+        background-color: transparent;
+    }
+}
+
+@keyframes show-details {
+    0% {
+        background-color: transparent;
+    }
+
+    100% {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+}
+
+@keyframes hide-details {
+    0% {
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    100% {
+        background-color: transparent;
+    }
+}
+
+@keyframes show-technologies {
+    0% {
+        z-index: 100;
+        opacity: 0;
+    }
+
+    100% {
+        z-index: 100;
+        opacity: 1;
+    }
+}
+
+@keyframes hide-technologies {
+    0% {
+        z-index: 100;
+        opacity: 1;
+    }
+
+    100% {
+        z-index: 100;
+        opacity: 0;
+    }
+}
+
+@media only screen and (max-width: 1180px) {
+    .project {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 868px) {
+    .project {
+        width: 90%;
+    }
+
+}
+
+@media only screen and (max-width: 780px) {
+    .technology-name {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 568px) {
+    .technology-image {
+        width: 30px;
+        margin-top: 0.5rem ;
+    } 
+
+    .details h2 {
+        font-size: 1rem ;
+    } 
+
+    .project .details a {
+        padding: 0.4rem;
+        font-size: 0.6rem;
+    }
+}
+
+@media only screen and (max-width: 410px) {
+    .technology-image {
+        margin-top: 0;
+    } 
+
+    @keyframes show-project-name {
+        0% {
+            top: -20%;
+            color: transparent;
+        }
+    
+        100% {
+            top: 2%;
+            color: black;
+        }
+    }
+    
+    @keyframes hide-project-name {
+        0% {
+            top: 2%;
+            color: black;
+        }
+    
+        100% {
+            top: -20%;
+            color: transparent;
+        }
+    }
+    
+    @keyframes show-project-link {
+        0% {
+            bottom: -20%;
+            background-color: transparent;
+        }
+    
+        100% {
+            bottom: 15%;
+            background-color: var(--color-primary);
+        }
+    }
+    
+    @keyframes hide-project-link {
+        0% {
+            bottom: 15%;
+            background-color: var(--color-primary);
+        }
+    
+        100% {
+            bottom: -20%;
+            background-color: transparent;
+        }
+    }
+}
+
+
+
+
