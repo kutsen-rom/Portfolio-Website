@@ -15,7 +15,7 @@
     margin: 5% 5%;
 }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 560px) {
     .skills h2 {
         font-size: 1.25rem;
     }

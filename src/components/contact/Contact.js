@@ -19,7 +19,10 @@ export const Contact = ({ setVisibility }) => {
         })
     }
 
-    const onSubmit = (e) => {
+    const handleClick = (e) => {
+        if (!sendTo.from_name || !sendTo.reply_to || !sendTo.message) {
+            return
+        }
         e.preventDefault();
         setSent('loading');
         send(
@@ -31,7 +34,12 @@ export const Contact = ({ setVisibility }) => {
             setSent('sent');
             setTimeout(() => {
                 setSent('not-sent')
-            }, 2500)
+            }, 2500);
+            setSendTo({
+                from_name: '',
+                message: '',
+                reply_to: ''
+            })
         })
         .catch(err => {
             setSent('error');
@@ -39,17 +47,13 @@ export const Contact = ({ setVisibility }) => {
                 setSent('not-sent')
             }, 2500)
         })
-        setSendTo({
-            from_name: '',
-            message: '',
-            reply_to: ''
-        })
+        
     }
 
     return (
         <div id='contact' className='contact'>
             <h2>Contact</h2>
-            <form onSubmit={onSubmit} className={`contact-form `}>
+            <form className={`contact-form `}>
                 <input 
                     name='from_name'
                     type='text'
@@ -77,10 +81,9 @@ export const Contact = ({ setVisibility }) => {
                 <TrackVisibility>
                     {({ isVisible }) => isVisible && setVisibility('contact')}
                 </TrackVisibility>
-                <input 
-                    className='submit-button'
-                    type='submit'
-                />
+                <button onClick={handleClick} className='submit-button'>
+                    Send
+                </button>
                 <div style={{animation: `message-${sent} 2s forwards`}} className={`result ${sent}`}>
                     {sent === 'sent' 
                         ? <h2>Succes</h2>
