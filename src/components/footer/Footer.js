@@ -10,7 +10,7 @@ export const Footer = () => {
                 {/* eslint-disable-next-line */}
                 <a target='_blank' rel="noreferrer" href='https://t.me/user_mane' className='contact-link telegram'></a>
                 {/* eslint-disable-next-line */}
-                <a target='_blank' rel="noreferrer" href='https://github.com/navsi100rom' className='contact-link github'></a>
+                <a target='_blank' rel="noreferrer" href='https://github.com/kutsen-rom' className='contact-link github'></a>
             </div>
             <h6>Made in Kyiv 2022</h6>
         </footer>
