@@ -105,7 +105,7 @@ export const projects = [
         name: 'Old Portfolio Web Site',
         image: '/images/old-portfolio.png',
         details: 'KindaReddit is a React-Redux application that allows user to perform basic actions (view, search, sort) posts and comments on Reddit based on undocumented reddit.json API.',
-        link: 'https://navsi100rom.github.io/Portfolio-Web-Site/',
+        link: 'https://kutsen-rom.github.io/Portfolio-Web-Site',
         technologies: [
                 {
                     name: 'html',
